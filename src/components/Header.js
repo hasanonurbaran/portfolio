@@ -18,7 +18,8 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle 
             aria-controls="basic-navbar-nav" 
-            onClick={() => setExpanded(expanded ? false : "expanded")} 
+            onClick={() => setExpanded(expanded ? false : "expanded")}
+            className="navbar-toggler-custom"
           />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto diagoona-nav">
