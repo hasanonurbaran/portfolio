@@ -76,8 +76,9 @@ const Contact = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="mailto:hasanonurbaran21@gmail.com">
-                        <FontAwesomeIcon icon={faEnvelope} className="contact-icon" /> <span style={{ fontSize: '1rem' }}>hasanonurbaran21@gmail.com</span>
+                      <a href="mailto:hasanonurbaran21@gmail.com" className="email-link">
+                        <FontAwesomeIcon icon={faEnvelope} className="contact-icon" /> 
+                        <span className="email-address">hasanonurbaran21@gmail.com</span>
                       </a>
                     </li>
                   </ul>
