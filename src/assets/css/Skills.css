@@ -1,0 +1,115 @@
+.skills-page {
+  min-height: 90vh;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2rem !important;
+  word-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
+  margin-left: 50px;
+}
+
+.skills-intro {
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.skills-container {
+  background-color: rgba(35, 35, 35, 0.85);
+  border-radius: 8px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.technologies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1.5rem;
+}
+
+.tech-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 1.2rem 1rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+  background-color: rgba(23, 162, 184, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: #17a2b8;
+}
+
+.skills-extra {
+  margin-top: 3rem;
+  padding: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(35, 35, 35, 0.85);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.skills-extra h3 {
+  color: #17a2b8;
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.skills-extra p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .skills-container {
+    padding: 2rem;
+  }
+  
+  .technologies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.2rem;
+  }
+  
+  .skills-extra {
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 1.5rem;
+  }
+  
+  .technologies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+  }
+  
+  .tech-item {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+  
+  .skills-extra h3 {
+    font-size: 1.3rem;
+  }
+  
+  .skills-extra p {
+    font-size: 1rem;
+  }
+} 

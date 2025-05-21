@@ -1,38 +1,163 @@
+:root {
+  --primary-color: #343a40;
+  --secondary-color: #f8f9fa;
+  --accent-color: #17a2b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.diagoona-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  overflow: hidden;
+  min-height: 100vh;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
+.diagoona-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  background-color: rgba(52, 58, 64, 0.9);
+  transform: skewX(-15deg) translateX(15%);
+  z-index: 1;
+}
+
+.diagoona-content {
+  position: relative;
+  z-index: 2;
+  padding: 80px 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.diagoona-content-inner {
+  max-width: 40%;
+  margin-left: auto;
+  padding: 0 70px 0 20px;
+  position: relative;
+  right: 12%;
+}
+
+.diagoona-content-inner h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  word-wrap: break-word;
+}
+
+
+.page-section {
+  padding: 80px 0;
+}
+
+
+.contact-form {
+  background: white;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 10px 20px;
   color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-primary:hover {
+  background-color: #138496;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.main-content {
+  flex-grow: 1;
+}
+
+
+@media (max-width: 1200px) {
+  .diagoona-content-inner {
+    max-width: 40%;
+    padding: 0 60px 0 20px;
+    right: 12%;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .diagoona-content-inner h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .diagoona-content-inner {
+    max-width: 45%;
+    right: 12%;
+    padding: 0 50px 0 20px;
+  }
+  
+  .diagoona-content-inner h1 {
+    font-size: 1.8rem;
+  }
+  
+  .diagoona-bg::before {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .diagoona-bg::before {
+    width: 100%;
+    transform: none;
+  }
+  
+  .diagoona-content-inner {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+    right: 0;
   }
 }
