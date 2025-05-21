@@ -38,7 +38,7 @@ const Portfolio = () => {
       image: '/images/portfolio/project4.jpg',
       description: 'OpenWeatherMap API kullanarak geliştirilmiş hava durumu uygulaması. Konum tabanlı tahminler ve 5 günlük öngörüler sunar.',
       technologies: ['JavaScript', 'HTML/CSS', 'API Integration'],
-      githubLink: 'https://github.com/'
+      githubLink: 'https://github.com/hasanonurbaran/portfolio'
     },
     {
       id: 5,
