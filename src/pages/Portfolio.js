@@ -2,13 +2,22 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import '../assets/css/Portfolio.css';
 
+// Resim importları
+import PortfolioBg from '../assets/images/portfolio/portfolio-bg.jpg';
+import Project1Img from '../assets/images/portfolio/project1.jpg';
+import Project2Img from '../assets/images/portfolio/project2.jpg';
+import Project3Img from '../assets/images/portfolio/project3.jpg';
+import Project4Img from '../assets/images/portfolio/project4.jpg';
+import Project5Img from '../assets/images/portfolio/project5.jpg';
+import Project6Img from '../assets/images/portfolio/project6.jpg';
+
 const Portfolio = () => {
   const projects = [
     {
       id: 1,
       title: 'Hava Durumu Uygulaması',
       category: 'Web Geliştirme',
-      image: '/images/portfolio/project1.jpg',
+      image: Project1Img,
       description: 'React ve Node.js kullanarak geliştirdiğim tam özellikli e-ticaret platformu. Redux ile state yönetimi, MongoDB veritabanı ve ödeme entegrasyonu içerir.',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Redux'],
       githubLink: 'https://github.com/hasanonurbaran/havadurumu'
@@ -17,7 +26,7 @@ const Portfolio = () => {
       id: 2,
       title: 'Döviz Uygulaması',
       category: 'Web Geliştirme',
-      image: '/images/portfolio/project2.jpg',
+      image: Project2Img,
       description: 'Kullanıcıların kayıt olabileceği, gönderi paylaşabileceği ve etkileşimde bulunabileceği bir sosyal medya uygulaması. Real-time mesajlaşma özelliği ile donatılmıştır.',
       technologies: ['React', 'Firebase', 'Socket.io', 'Sass'],
       githubLink: 'https://github.com/hasanonurbaran/Currency-Exchange-Tracker'
@@ -26,7 +35,7 @@ const Portfolio = () => {
       id: 3,
       title: 'Blog Sitesi',
       category: 'Web Geliştirme',
-      image: '/images/portfolio/project3.jpg',
+      image: Project3Img,
       description: 'Kişisel portfolyo sitesi. Modern tasarım, responsive layout ve animasyonlar içerir.',
       technologies: ['React', 'Bootstrap', 'Gsap', 'Netlify'],
       githubLink: 'https://github.com/hasanonurbaran/blogsite'
@@ -35,7 +44,7 @@ const Portfolio = () => {
       id: 4,
       title: 'Portfolyo Sitesi',
       category: 'Web Geliştirme',
-      image: '/images/portfolio/project4.jpg',
+      image: Project4Img,
       description: 'OpenWeatherMap API kullanarak geliştirilmiş hava durumu uygulaması. Konum tabanlı tahminler ve 5 günlük öngörüler sunar.',
       technologies: ['JavaScript', 'HTML/CSS', 'API Integration'],
       githubLink: 'https://github.com/hasanonurbaran/portfolio'
@@ -44,7 +53,7 @@ const Portfolio = () => {
       id: 5,
       title: 'Yakında Eklenecek',
       category: '',
-      image: '/images/portfolio/project5.jpg',
+      image: Project5Img,
       description: 'Drag and drop özelliği ile görevleri yönetmeyi sağlayan web uygulaması. Kanban tarzı arayüz ve kullanıcı dostu tasarım.',
       technologies: ['Vue.js', 'Vuex', 'Firebase', 'Vuetify'],
       githubLink: 'https://github.com/'
@@ -53,7 +62,7 @@ const Portfolio = () => {
       id: 6,
       title: 'Yakında Eklenecek',
       category: '',
-      image: '/images/portfolio/project6.jpg',
+      image: Project6Img,
       description: 'Kullanıcıların kayıt olabileceği, makale yazabileceği ve yorum yapabileceği tam özellikli bir blog platformu.',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
       githubLink: 'https://github.com/'
@@ -61,7 +70,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="portfolio-page diagoona-bg" style={{ backgroundImage: `url('/images/portfolio/portfolio-bg.jpg')` }}>
+    <div className="portfolio-page diagoona-bg" style={{ backgroundImage: `url(${PortfolioBg})` }}>
       <div className="diagoona-content">
         <Container>
           <div className="diagoona-content-inner">
