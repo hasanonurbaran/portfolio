@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
@@ -10,29 +10,6 @@ import Contact from './pages/Contact';
 import Footer from './components/Footer';
 
 function App() {
-  // Eklenti çakışmalarını önleme
-  useEffect(() => {
-    const patchExternalLibraries = () => {
-      const originalAddEventListener = document.addEventListener;
-      document.addEventListener = function(type, listener, options) {
-        if (typeof listener === 'function' && !type.startsWith('extension-')) {
-          return originalAddEventListener.call(this, type, listener, options);
-        }
-        return undefined;
-      };
-    };
-    
-    if (process.env.NODE_ENV === 'development') {
-      patchExternalLibraries();
-    }
-    
-    return () => {
-      if (process.env.NODE_ENV === 'development') {
-        document.addEventListener = window.originalAddEventListener;
-      }
-    };
-  }, []);
-
   return (
     <Router>
       <div className="App">

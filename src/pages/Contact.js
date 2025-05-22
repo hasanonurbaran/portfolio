@@ -100,7 +100,7 @@ const Contact = () => {
                           type="text" 
                           name="name" 
                           value={formData.name} 
-                          onChange={handleChange}
+                          onChange={handleChange} 
                           required 
                         />
                       </Form.Group>
@@ -111,7 +111,7 @@ const Contact = () => {
                           type="email" 
                           name="email" 
                           value={formData.email} 
-                          onChange={handleChange}
+                          onChange={handleChange} 
                           required 
                         />
                       </Form.Group>
@@ -123,7 +123,7 @@ const Contact = () => {
                           rows={4} 
                           name="message" 
                           value={formData.message} 
-                          onChange={handleChange}
+                          onChange={handleChange} 
                           required 
                         />
                       </Form.Group>
