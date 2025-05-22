@@ -12,8 +12,6 @@ import Footer from './components/Footer';
 function App() {
   // Eklenti çakışmalarını önleme
   useEffect(() => {
-    const originalWindowProps = Object.getOwnPropertyNames(window);
-    
     const patchExternalLibraries = () => {
       const originalAddEventListener = document.addEventListener;
       document.addEventListener = function(type, listener, options) {
